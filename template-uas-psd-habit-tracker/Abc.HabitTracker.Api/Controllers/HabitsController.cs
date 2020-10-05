@@ -89,7 +89,6 @@ namespace Abc.HabitTracker.Api.Controllers
         [HttpPost("api/v1/users/{userID}/habits")]
         public ActionResult<Habit> AddNewHabit(Guid userID, [FromBody] RequestData data)
         {
-            //mock only. replace with your solution
             UserEntity user = _userRepository.FindByID(userID);
             if (user == null)
                 return NotFound("user not found");
